@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="display-4">Currencies</h1>
+    <p class="lead">
+      Returns actual volume-weighted price, total 24h volume, rate change as well as prices and volumes across more than 60 exchanges.
+    </p>
+    <!-- <div *ngIf="cryptos">
+      <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
+        <span class="left">{{ cryptos[crypto].name }}</span>
+        <span class="right"></span>
+      </div>
+    </div> -->
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Name</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Total Vol. 24H</th>
+            <th scope="col">Market Cap</th>
+            <th scope="col">Chg. 24H</th>
+            <th scope="col">Social</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="currencies">
+          <tr *ngFor="let currecy of objectKeys(currencies)">
+            <td>
+              <img src="https://www.cryptocompare.com{{ currencies[currecy].ImageUrl }}" alt="{{ currencies[currecy].CoinName }}" width="30px">
+            </td>
+            <td>
+              <a href="https://www.cryptocompare.com{{ currencies[currecy].Url }}" target="_blank">{{ currencies[currecy].CoinName }}</a>
+
+            </td>
+            <td>
+              {{ currencies[currecy].Symbol }}
+            </td>
+            <td>
+              N/A
+            </td>
+            <td>
+              N/A
+            </td>
+            <td>
+              %
+            </td>
+            <td>
+              <a href="#">Twitter</a> |
+              <a href="#">Facebook</a> |
+              <a href="#">Github</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

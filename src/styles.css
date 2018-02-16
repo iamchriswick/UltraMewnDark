@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+nav {
+  margin-bottom: 40px;
+}
+
+footer {
+  padding-top: 40px;
+}
+
+.maintenence {
+  color: #721c24 !important;
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+}
+
+.maintenence td {
+  border: none;
+}

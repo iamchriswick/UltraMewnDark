@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="display-4">Exchanges</h1>
+    <p class="lead">
+      Indexing 130 cryptocoin exchanges with a total 24h volume of 887,428 BTC and $8.97bn USD on 2743 trading pairs.
+    </p>
+    <!-- <div *ngIf="cryptos">
+        <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
+          <span class="left">{{ cryptos[crypto].name }}</span>
+          <span class="right"></span>
+        </div>
+      </div> -->
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Exchange Name</th>
+            <th scope="col">Trading Pairs</th>
+            <th scope="col">24h Volume USD</th>
+            <th scope="col">24h Volume BTC</th>
+            <th scope="col">Platform</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="markets">
+          <tr *ngFor="let market of objectKeys(markets)">
+            <td>
+              {{ markets[market].exchangeName }}
+            </td>
+            <td>
+              <a href="">{{ markets[market].tradingPairs }}</a>
+            </td>
+            <td>
+              {{ markets[market].dailyVolumeUSD }}
+            </td>
+            <td>
+              {{ markets[market].dailyVolumeBTC }}
+            </td>
+            <td>
+              <a href="#">https://www.domain.com/</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
