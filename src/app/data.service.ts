@@ -14,12 +14,12 @@ export class DataService {
 
   constructor(private _http: HttpClient) {}
 
-  getCurrencies() {
-    return this._http
-      .get(publicCors1 + 'https://min-api.cryptocompare.com/data/all/coinlist')
-      .map(result => (this.result = result.Data));
+  // getCurrencies() {
+  //   return this._http
+  //     .get(publicCors1 + 'https://min-api.cryptocompare.com/data/all/coinlist')
+  //     .map(result => (this.result = result.Data));
 
-  }
+  // }
 
 
 }

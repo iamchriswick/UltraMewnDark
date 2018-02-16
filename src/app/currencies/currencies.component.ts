@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-// import { currencyList} from './currencyList';
+import { currencyList } from './currencyList';
 
 @Component({
   selector: 'app-currencies',
@@ -9,16 +9,19 @@ import { DataService } from '../data.service';
 })
 export class CurrenciesComponent implements OnInit {
   objectKeys = Object.keys;
-  currencies: any;
+  // currencies: any;
+  currencies = currencyList;
 
   constructor(private _data: DataService) {}
 
   ngOnInit() {
 
-    this._data.getCurrencies().subscribe(res => {
-      this.currencies = res;
-      // console.log(res);
-    });
+    console.log(this.currencies);
+
+    // this._data.getCurrencies().subscribe(res => {
+    //   this.currencies = res;
+    //   // console.log(res);
+    // });
 
     // if (typeof Storage !== 'undefined') {
     //   // Code for localStorage/sessionStorage.
@@ -46,6 +49,7 @@ export class CurrenciesComponent implements OnInit {
     //     // console.log(res);
     //   });
     // }
+
   }
 }
 
